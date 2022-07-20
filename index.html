@@ -1,0 +1,31 @@
+<!--
+    index.html 
+
+    This file make for learning work with th USDZ inside of the 
+    Safari web browser.
+
+    The most important references available inside of the 
+    https://webkit.org/blog/
+-->
+<!DOCTYPE html>
+<html>
+  <head></head>
+
+  <body>
+    <a rel="ar" href="assets/usds/heart.usdz">
+      <span>Tap me to show simple USDX inside your Safari</span>
+    </a>
+
+    <script>
+      // Create Anchor link
+      const a = document.createElement("ar");
+
+      // Checking availability of AR inside of every HTML web page!
+      // Using `rel="ar"` to checking support of a section from the
+      // Web AR.
+      if (a.relList.support("ar")) {
+        window.alert("AR is available in this simple HTML");
+      }
+    </script>
+  </body>
+</html>
