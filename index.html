@@ -9,13 +9,47 @@
 -->
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: medium;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+    </style>
+  </head>
 
   <body>
-    <a rel="ar" href="assets/usds/heart.usdz">
-      <span>Tap me to show simple USDX inside your Safari</span>
-    </a>
+    <div class="container">
+      <h1>
+        Oh nice. Welcome back to Alireza.codes (Soltani) GH Page about Web AR
+      </h1>
+      <h2>There is some example of my web AR App</h2>
 
+      <a rel="ar" href="assets/usds/heart.usdz">
+        <span>Tap to getting my heart!!!</span>
+      </a>
+
+      <a rel="ar" href="assets/usds/chair_swan.usdz">
+        <span>Show Chair Swan</span>
+      </a>
+
+      <a rel="ar" href="assets/usds/flower_tulip.usdz">
+        <span>Show Flower tulip</span>
+      </a>
+
+      <a rel="ar" href="assets/usds/teapot.usdz">
+        <span>Show Teapot</span>
+      </a>
+    </div>
     <script>
       // Create Anchor link
       const a = document.createElement("ar");
