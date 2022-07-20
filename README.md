@@ -44,6 +44,10 @@ Android in most cases use ARKit for supporting AR in their devices. at iOS12
 or latest version of that users can use this feature directly in any where of
 iOS ecosystem. In iOS devices it will use *USDX* and *USDA* 3D file format.
 
+## TODO
+
+- Checking Android tag for ARCore[]
+
 # References
 
 - To checking your glb file, [Check me](https://arvr.google.com/scene-viewer-preview)

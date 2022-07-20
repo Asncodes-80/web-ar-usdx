@@ -9,50 +9,49 @@
 -->
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <style>
-      .container {
-        display: flex;
-        flex-direction: column;
-      }
-
-      a {
-        text-decoration: none;
-        color: black;
-        font-size: medium;
-        margin-top: 20px;
-        margin-left: 10px;
-      }
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: medium;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="container">
-      <h1>
-        Oh nice. Welcome back to Alireza.codes (Soltani) GH Page about Web AR
-      </h1>
-      <h2>Only in iOS</h2>
+        <h1>
+            Oh nice. Welcome back to Alireza.codes (Soltani) GH Page about Web AR
+        </h1>
+        <h2>Only in iOS</h2>
 
-      <a rel="ar" href="assets/usds/heart.usdz">
-        <span>Tap to getting my heart!!!</span>
-      </a>
+        <a rel="ar" href="assets/usds/heart.usdz">
+            <span>Tap to getting my heart!!!</span>
+        </a>
 
-      <a rel="ar" href="assets/usds/chair_swan.usdz">
-        <span>Show Chair Swan</span>
-      </a>
+        <a rel="ar" href="assets/usds/chair_swan.usdz">
+            <span>Show Chair Swan</span>
+        </a>
 
-      <a rel="ar" href="assets/usds/flower_tulip.usdz">
-        <span>Show Flower tulip</span>
-      </a>
+        <a rel="ar" href="assets/usds/flower_tulip.usdz">
+            <span>Show Flower tulip</span>
+        </a>
 
-      <a rel="ar" href="assets/usds/teapot.usdz">
-        <span>Show Teapot</span>
-      </a>
+        <a rel="ar" href="assets/usds/teapot.usdz">
+            <span>Show Teapot</span>
+        </a>
 
-      <h2>Only in Android</h2>
-      <a
-        href="intent://arvr.google.com/scene-viewer/1.0?file=https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Avocado/glTF/Avocado.gltf&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;"
-        >Avocado</a
+        <h2>Only in Android</h2>
+        <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Avocado/glTF/Avocado.gltf&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">Avocado</a
       >
 
       <model-viewer
@@ -60,7 +59,8 @@
         ar-modes="scene-viewer webxr quick-look"
         alt="A 3D model of an astronaut."
         src="/assets/glTF/Duck.gltf"
-      ></model-viewer>
+        >Click me to show the Duck</model-viewer
+      >
     </div>
     <script>
       // Create Anchor link
