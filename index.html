@@ -10,20 +10,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <style>
-        .container {
-            display: flex;
-            flex-direction: column;
-        }
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
 
-        a {
-            text-decoration: none;
-            color: black;
-            font-size: medium;
-            margin-top: 20px;
-            margin-left: 10px;
-        }
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: medium;
+        margin-top: 20px;
+        margin-left: 10px;
+      }
     </style>
   </head>
 
@@ -32,7 +31,7 @@
       <h1>
         Oh nice. Welcome back to Alireza.codes (Soltani) GH Page about Web AR
       </h1>
-      <h2>There is some example of my web AR App only in iOS</h2>
+      <h2>Only in iOS</h2>
 
       <a rel="ar" href="assets/usds/heart.usdz">
         <span>Tap to getting my heart!!!</span>
@@ -50,10 +49,18 @@
         <span>Show Teapot</span>
       </a>
 
+      <h2>Only in Android</h2>
+      <a
+        href="intent://arvr.google.com/scene-viewer/1.0?file=https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Avocado/glTF/Avocado.gltf&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;"
+        >Avocado</a
+      >
 
-      <h2>There is some example of my web AR App only in Android</h2>
-
-
+      <model-viewer
+        ar
+        ar-modes="scene-viewer webxr quick-look"
+        alt="A 3D model of an astronaut."
+        src="/assets/glTF/Duck.gltf"
+      ></model-viewer>
     </div>
     <script>
       // Create Anchor link
@@ -65,6 +72,30 @@
       if (a.relList.support("ar")) {
         window.alert("AR is available in this simple HTML");
       }
+
+      // Android section
+      // Check whether this is an Android device that requested this view
+      const isAndroid = /android/i.test(navigator.userAgent);
+      // Fallback URL is used if the Google app is not installed and up to date.
+      // It's like some limit of Google Play Services on Huawei devices.
+      const fallbackUrl =
+        "https://arvr.google.com/scene-viewer?file=https%3A%2F%2Fstorage.googleapis.com%2Far-answers-in-search-models%2Fstatic%2FTiger%2Fmodel.glb&link=https%3A%2F%2Fgoogle.com&title=Tiger";
+
+      // This intent URL trigger Scene Viewer on Android and falls back to
+      // fallbackURL if the Google app is not installed and up to date.
+      const sceneViewerUrl =
+        "intent://arvr.google.com/scene-viewer/1.0?file=https://storage.googleapis.com/ar-answers-in-search-models/static/Tiger/model.glb&title=Tiger#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=" +
+        fallbackUrl +
+        ";end;";
+
+      // Create a link.
+      var aAndroid = document.createElement("a");
+      aAndroid.appendChild(document.createTextNode("Tiger"));
+      // Set the href to the intent URL on Android and the fallback URL
+      // everywhere else.
+      aAndroid.href = isAndroid ? sceneViewerUrl : fallbackUrl;
+      // Add the link to the page.
+      document.body.appendChild(aAndroid);
     </script>
   </body>
 </html>

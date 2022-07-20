@@ -48,3 +48,4 @@ iOS ecosystem. In iOS devices it will use *USDX* and *USDA* 3D file format.
 
 - To checking your glb file, [Check me](https://arvr.google.com/scene-viewer-preview)
 - To check full reference of Android, [Read me](https://developers.google.com/ar/develop/scene-viewer)
+- glTF 3D model assets, [Check repo](https://github.com/KhronosGroup/glTF-Sample-Models)
